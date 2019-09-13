@@ -24,17 +24,17 @@ class Bone {
         image(this.image, this.x, this.y, this.width, this.height);
     }
 
-    followDog(dog) {
-        if (abs(dog.x - this.x) > abs(dog.y - this.y)) {
-            if (dog.x - this.x > 0) {
+    followDog(pet) {
+        if (abs(pet.x - this.x) > abs(pet.y - this.y)) {
+            if (pet.x - this.x > 0) {
                 this.speedX = -1;
                 this.speedY = 0;
             } else {
                 this.speedX = 1;
                 this.speedY = 0;
             }
-        } else if (abs(dog.x - this.x) < abs(dog.y - this.y)) {
-            if (dog.y - this.y > 0) {
+        } else if (abs(pet.x - this.x) < abs(pet.y - this.y)) {
+            if (pet.y - this.y > 0) {
                 this.speedX = 0;
                 this.speedY = -1;
             } else {
